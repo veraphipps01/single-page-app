@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,400&family=Megrim&family=Faster+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/lazov_5.1.ttf"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=GFS+Didot&display=swap" rel="stylesheet">
+
+    <title>_VAAZA</title>  
+</head>
+
+
+<body style="background: rgba(187, 171, 146, 0.363);">
+   
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background: transparent;">
+        <div class="container" id="content">
+         <a class="navbar-brand nav-text" href="#home" style="font-size: 250%; font-family: lazov; color:whitesmoke">vaaza.|.</a>
+           <button 
+           class="navbar-toggler" 
+           type="button" 
+           data-bs-toggle="collapse" 
+           data-bs-target="#navbarSupportedContent" 
+           aria-controls="navbarSupportedContent" 
+           aria-expanded="false" 
+           aria-label="Toggle navigation"
+           style="color:rgba(245, 245, 245, 0.637)">
+         <span class="navbar-toggler-icon color-white" style="color:rgba(245, 245, 245, 0.637)"></span>
+             </button>
+   
+             <div class="collapse navbar-collapse" id="navbarSupportedContent"  style="color:whitesmoke; font-family: 'Courier Prime', monospace;">
+               <ul class="navbar-nav ms-auto">
+                   <li class="nav-item">
+                       <a class="nav-link" href="#home" style="color:rgba(245, 245, 245, 0.637)">Home</a>
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="#shop" style="color:rgba(245, 245, 245, 0.637)">Sculpture</a>
+   
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="#about" style="color:rgba(245, 245, 245, 0.637)">About</a> 
+                   </li>
+                   <li class="nav-item">
+                       <a class="nav-link" href="#contact" style="color:rgba(245, 245, 245, 0.637)">Contact</a>
+                   </li>
+                   <li class="nav-item">
+                    <div class="ec-cart-widget"></div>
+                    <div>
+                    <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?70532549&data_platform=code&data_date=2022-01-26" charset="utf-8"></script>
+                    <script type="text/javascript">Ecwid.init();</script>
+                    </div>
+                 </li>
+               </ul>
+           </div>
+        </div>
+    </nav>
+
+ 
+ 
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"
+      ></script>
+
+      <script>
+
+        async function loadPage(){
+            console.log(location.hash);
+            let page      = location.hash.replace('#', '');
+            const res     = await fetch(page);
+            const content = await res.text();
+            const element = document.getElementById('content');
+            element.innerHTML = content;
+        };            
+    
+        window.addEventListener('hashchange', loadPage);    
+      
+    </script>
+      
+
+  
+  </body>
+</html>
